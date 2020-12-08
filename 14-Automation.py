@@ -3,7 +3,7 @@ import openpyxl as xl
 from openpyxl.chart import BarChart, Reference
 
 def process_spreadsheet(filename):
-    wb = xl.load_workbook("C:\\Users\\isaac\\source\\repos\\IntroToPython\\Files\\" + filename)
+    wb = xl.load_workbook("IntroToPython\\Files\\" + filename)
     sheet = wb["Sheet1"]
 
     for row in range(2, sheet.max_row + 1):
@@ -18,7 +18,7 @@ def process_spreadsheet(filename):
     sheet.add_chart(chart, "E2")
 
 
-    wb.save("C:\\Users\\isaac\\source\\repos\\IntroToPython\\Files\\OutputExSpreadsheet.xlsx")
+    wb.save("IntroToPython\\Files\\OutputExSpreadsheet.xlsx")
 
     
 filename = "ExSpreadsheet.xlsx"
